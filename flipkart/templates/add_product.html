@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <form method='POST' action='{% url "add_product" %}'>
+            {% csrf_token %}
+            <label for='name'>name</label>
+            <input id='name' name='name' required>
+            <label for='price'>price</label>
+            <input id='price' name='price' required>
+            <label for='qty'>quantity</label>
+            <input id='qty' name='qty' required>
+            <input type='submit'>
+      </form>
+{% endblock %}

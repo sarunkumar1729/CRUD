@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+      table{
+            width:100%;
+      }
+      td,th{
+            border:1px solid black;
+            padding:10px;
+      }
+</style>
+      <table>
+            <tr>
+                  <th>NAME</th>
+                  <th>PRICE</th>
+                  <th>QUANTITY</th>
+            </tr>
+            {% for product in products %}
+                  <tr>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.quantity}}</td>
+                  </tr>
+            {% endfor %}
+      </table>
+{% endblock %}
