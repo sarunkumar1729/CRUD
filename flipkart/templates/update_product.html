@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+      <form method='POST' action="{% url 'update_product' %}">
+            {% csrf_token %}
+            <label for='name'>name</label>
+            <input id='name' name='name' value={{product.name}} required>
+            <label for='price'>price</label>
+            <input id='price' name='price' value={{product.price}} required>
+            <label for='qty'>quantity</label>
+            <input id='qty' name='qty' value={{product.quantity}} required>
+            <input type='submit'>
+      </form>
+{% endblock %}

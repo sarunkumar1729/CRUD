@@ -15,12 +15,16 @@
                   <th>NAME</th>
                   <th>PRICE</th>
                   <th>QUANTITY</th>
+                  <th></th>
+                  <th></th>
             </tr>
             {% for product in products %}
                   <tr>
                         <td>{{product.name}}</td>
                         <td>{{product.price}}</td>
                         <td>{{product.quantity}}</td>
+                        <td><a href="{% url 'update_product_page' product.id %}">EDIT</a></td>
+                        <td><a href="{% url 'delete_product' product.id %}">DELETE</a></td>
                   </tr>
             {% endfor %}
       </table>
