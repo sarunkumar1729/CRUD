@@ -18,8 +18,10 @@ def add_product(request):
             name = request.POST['name']
             price = request.POST['price']
             qty = request.POST['qty']
-            product = Products(name=name,price=price,quantity=qty)
+            image = request.FILES.get('image')
+            product = Products(name=name,price=price,quantity=qty,image=image)
             product.save()
+            print('success')
             return redirect('add_product')  
       else:
             return render(request,'add_product.html')
@@ -28,6 +30,7 @@ def add_product(request):
       
 def product_list(request):
       products = Products.objects.all()
+      print(len(products))
       return render(request,'product_list.html',{'products':products})
 
 def update_product_page(request,i):
@@ -39,9 +42,11 @@ def update_product(request):
       name = request.POST['name']
       price = request.POST['price']
       qty = request.POST['qty']
+      image = request.FILES.get('image')
       product.name = name 
       product.price = price 
       product.quantity = qty 
+      product.image = image
       product.save()
       return redirect('product_list')
       

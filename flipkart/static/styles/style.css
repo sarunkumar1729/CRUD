@@ -1,0 +1,59 @@
+/* Basic styling for the form container */
+#productForm {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-family: Arial, sans-serif;
+  }
+  
+  /* Style for each label */
+  #productForm label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+  }
+  
+  /* Style for input fields */
+  #productForm input[type="text"],
+  #productForm input[type="file"],
+  #productForm input[type="submit"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+  }
+  
+  /* Styling the file input field */
+  #productForm input[type="file"] {
+      padding: 5px;
+      border: none;
+  }
+  
+  /* Style for the submit button */
+  #productForm input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+  }
+  
+  #productForm input[type="submit"]:hover {
+      background-color: #45a049;
+  }
+  
+  /* Style for error messages, if needed */
+  .error {
+      color: #d9534f;
+      font-size: 14px;
+      margin-top: 5px;
+  }
+  

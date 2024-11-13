@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-      <form method='POST' action="{% url 'update_product' %}">
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+
+      <form id='productForm' method='POST' action="{% url 'update_product' %}" enctype="multipart/form-data">
             {% csrf_token %}
             <label for='name'>name</label>
             <input id='name' name='name' value={{product.name}} required>
@@ -9,6 +11,8 @@
             <input id='price' name='price' value={{product.price}} required>
             <label for='qty'>quantity</label>
             <input id='qty' name='qty' value={{product.quantity}} required>
+            <label>image : </label>
+            <input type='file' name='image'>
             <input type='submit'>
       </form>
 {% endblock %}

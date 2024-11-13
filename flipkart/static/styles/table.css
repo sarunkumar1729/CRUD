@@ -1,0 +1,60 @@
+/* Table container styling */
+table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: Arial, sans-serif;
+      margin: 20px 0;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table header styling */
+  table th {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px;
+      font-weight: bold;
+      text-align: left;
+  }
+  
+  /* Table row and cell styling */
+  table td {
+      padding: 12px;
+      text-align: left;
+      color: #333;
+      border-bottom: 1px solid #ddd;
+  }
+  
+  /* Image styling */
+  table td img {
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hover effect for rows */
+  table tr:hover {
+      background-color: #f1f1f1;
+  }
+  
+  /* Styling for Edit and Delete links */
+  table td a {
+      text-decoration: none;
+      padding: 6px 12px;
+      color: white;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+  }
+  
+  table td a:hover {
+      opacity: 0.8;
+  }
+  
+  table td a:first-child {
+      background-color: #ff9800; /* Edit button color */
+  }
+  
+  table td a:last-child {
+      background-color: #f44336; /* Delete button color */
+  }
+  

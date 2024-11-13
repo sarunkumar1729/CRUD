@@ -1,14 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-      <form method='POST' action='{% url "add_product" %}'>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+      <form id='productForm' method='POST' action='{% url "add_product" %}' enctype="multipart/form-data">
             {% csrf_token %}
             <label for='name'>name</label>
-            <input id='name' name='name' required>
+            <input id='name' name='name' >
             <label for='price'>price</label>
-            <input id='price' name='price' required>
+            <input id='price' name='price' >
             <label for='qty'>quantity</label>
-            <input id='qty' name='qty' required>
+            <input id='qty' name='qty' >
+            <label>image : </label>
+            <input type='file' name='image'> 
             <input type='submit'>
       </form>
+<script src="{% static 'script/validation.js' %}"></script>
 {% endblock %}

@@ -123,3 +123,18 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MEDIA settings
+MEDIA_URL = '/media/'  # URL to access media files in development
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Directory to store media files
+
+# URL to access static files in templates
+STATIC_URL = '/static/'
+
+# Directory on your file system where static files are collected
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For production (more on this below)
+
+# Additional directories for static files in the project (for development)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]

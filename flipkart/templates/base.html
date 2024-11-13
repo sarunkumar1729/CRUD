@@ -1,13 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>My First Webpage</title>
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}">
   </head>
   <body>
+    <nav class="navbar">
       <a href="{% url 'add_product' %}">ADD PRODUCT</a>
       <a href="{% url 'product_list' %}">PRODUCT LIST</a>
+    </nav>
+    <img src="{% static 'images/logo.png' %}" width="200px">
       {% block content %}
             
       {% endblock %}
